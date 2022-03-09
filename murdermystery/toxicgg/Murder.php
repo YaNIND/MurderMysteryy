@@ -29,14 +29,10 @@ class Murder extends PluginBase{
         return self::$instance;
     }
 
-    public function onLoad(): void
-    {
-        self::$instance = $this;
-    }
-  
   public function onLoad(): void{
     $this->getLogger->info("Loading MurderMystery...");
     $this->getLogger->info("...");
+    self::$instance = $this;
   }
   
   public function onEnable(): void{
